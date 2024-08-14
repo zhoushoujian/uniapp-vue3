@@ -13,6 +13,7 @@ module.exports = {
     NodeJS: 'readonly',
     App: 'readonly',
     Page: 'readonly',
+    uni: 'readonly',
   },
   env: {
     browser: true,

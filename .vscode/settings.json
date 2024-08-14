@@ -1,0 +1,31 @@
+{
+  "eslint.enable": true,
+  "editor.formatOnSave": true,
+  "eslint.options": {
+    "extensions": [".ts", ".tsx", ".js", ".jsx"]
+  },
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.tabSize": 2,
+  "css.validate": false,
+  "less.validate": false,
+  "[less]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.stylelint": "explicit"
+    }
+  },
+  "git.ignoreLimitWarning": true,
+  "cSpell.words": [
+    "antd",
+    "commitlint",
+    "esbuild",
+    "fusionfintrade",
+    "ldap",
+    "pnpm",
+    "qianchengyimeng",
+    "shoujian",
+    "szhou"
+  ]
+}
