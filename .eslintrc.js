@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['@szhou/eslint-config/vue.js', '@szhou/eslint-config/base.js', '@szhou/eslint-config/prettier.js'],
+  extends: ['./lint/index'],
   parser: 'vue-eslint-parser',
   parserOptions: {
     ecmaFeatures: {
@@ -29,4 +29,4 @@ module.exports = {
       },
     ],
   },
-};
+}

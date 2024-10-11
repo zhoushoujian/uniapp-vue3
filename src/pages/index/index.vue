@@ -4,30 +4,24 @@
     <view class="text-area">
       <text class="title">{{ title }}</text>
     </view>
-    <view>
-      <uni-link :href="href" :text="href"></uni-link>
+    <view class="text">uview-plus进度组件：</view>
+    <view class="slider-container">
+      <up-slider v-model="value"></up-slider>
     </view>
-    <uni-section title="基本用法" type="line" padding>
-      <uni-rate v-model="rateValue" @change="onChange" />
-    </uni-section>
+    <view>当前进度：{{ value }}</view>
   </view>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from 'vue'
 
-const title = ref('Hello');
-const href = ref('https://uniapp.dcloud.io/component/README?id=uniui');
-const rateValue = ref(3);
-function onChange(e) {
-  // eslint-disable-next-line no-console
-  console.log('rate发生改变:' + JSON.stringify(e));
-  // console.log(this.rateValue);
-}
+const title = ref('Hello')
+const value = ref(30)
 </script>
 
 <style>
 .content {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,5 +45,13 @@ function onChange(e) {
 .title {
   font-size: 36rpx;
   color: #8f8f94;
+}
+
+.text {
+  margin-top: 32px;
+}
+
+.slider-container {
+  width: 100%;
 }
 </style>
