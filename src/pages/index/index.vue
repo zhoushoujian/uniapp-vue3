@@ -9,6 +9,9 @@
       <up-slider v-model="value"></up-slider>
     </view>
     <view>当前进度：{{ value }}</view>
+
+    <up-text text="up-text" />
+    <up-button type="primary" text="up-button"></up-button>
   </view>
 </template>
 
