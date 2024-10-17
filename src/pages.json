@@ -9,14 +9,15 @@
   ],
   "globalStyle": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "uni-app",
+    "navigationBarTitleText": "正在加载",
     "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
+    "backgroundColor": "#fffef8"
   },
   "easycom": {
     "autoscan": true,
     "custom": {
-      "^up-(.*)": "uview-plus/components/u-$1/u-$1.vue"
+      "^up-(.*)": "uview-plus/components/u-$1/u-$1.vue",
+      "^u-([^-].*)": "uview-plus/components/u-$1/u-$1.vue"
     }
   }
 }

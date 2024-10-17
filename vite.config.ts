@@ -3,13 +3,16 @@ import uni from '@dcloudio/vite-plugin-uni'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import checker from 'vite-plugin-checker'
 import { consoleFormat } from '@szhou/script-tools'
+import * as path from 'path'
 
 consoleFormat()
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  // root: './src',
   root: process.cwd(),
+  // base: '/assets/temp',
+  // base: '/csd/dist/build/h5',
+  publicDir: path.resolve(__dirname, './public'),
   plugins: [
     uni(),
     vueJsx({
@@ -22,7 +25,7 @@ export default defineConfig({
   ],
   server: {
     host: '0.0.0.0',
-    port: 8888,
+    port: 8443,
     strictPort: true,
     open: `/`,
     hmr: {
@@ -40,4 +43,7 @@ export default defineConfig({
       },
     },
   },
+  // define: {
+  //   'process.env.MODE_ENV': JSON.stringify(process.env.MODE_ENV),
+  // },
 })

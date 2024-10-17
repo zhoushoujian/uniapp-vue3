@@ -44,7 +44,8 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "types": [
-      "@dcloudio/types"
+      "@dcloudio/types",
+      "node"
     ]
   },
   "ts-node": {
@@ -56,6 +57,11 @@
     "src/**/*",
     "src/**/*.ts",
     "src/**/*.vue",
+  ],
+  "exclude": [
+    "dist/*",
+    "src/uni_modules/*",
+    "**/*/uni.webview.1.5.5.js"
   ],
   "vueCompilerOptions": {
     "target": 3

@@ -1,15 +1,20 @@
 <script setup lang="ts">
-/* eslint-disable no-console */
 import { onLaunch, onShow, onHide } from '@dcloudio/uni-app'
+// import { parseUrlParams } from '@szhou/script-tools'
+import { logger } from './utils/lib'
 
 onLaunch(() => {
-  console.log('App Launch')
+  logger.log('App Launch')
+  // const { env } = parseUrlParams()
+  // if (!env) {
+  //   toast('env不能为空')
+  // }
 })
 onShow(() => {
-  console.log('App Show')
+  // logger.log('App Show')
 })
 onHide(() => {
-  console.log('App Hide')
+  // logger.log('App Hide')
 })
 </script>
 <style lang="scss">

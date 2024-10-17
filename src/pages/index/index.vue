@@ -17,9 +17,11 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { logger } from '@/utils/lib'
 
 const title = ref('Hello')
 const value = ref(30)
+logger.info('title', title)
 </script>
 
 <style>
