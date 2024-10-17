@@ -1,20 +1,25 @@
-<!-- eslint-disable no-console -->
 <script setup lang="ts">
-import { onLaunch, onShow, onHide } from '@dcloudio/uni-app';
+import { onLaunch, onShow, onHide } from '@dcloudio/uni-app'
+// import { parseUrlParams } from '@szhou/script-tools'
+import { logger } from './utils/lib'
 
 onLaunch(() => {
-  console.log('App Launch');
-});
+  logger.log('App Launch')
+  // const { env } = parseUrlParams()
+  // if (!env) {
+  //   toast('env不能为空')
+  // }
+})
 onShow(() => {
-  console.log('App Show');
-});
+  // logger.log('App Show')
+})
 onHide(() => {
-  console.log('App Hide');
-});
+  // logger.log('App Hide')
+})
 </script>
 <style lang="scss">
-@import '@/uni_modules/uni-scss/index.scss';
-@import '@/uni_modules/uni-scss/variables.scss';
+@import 'uview-plus/theme.scss';
+@import 'uview-plus/index';
 
 page {
   background-color: #f5f5f5;

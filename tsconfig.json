@@ -1,27 +1,69 @@
 {
-  "extends": "@vue/tsconfig/tsconfig.json",
   "compilerOptions": {
-    "sourceMap": true,
-    "baseUrl": ".",
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
     "allowJs": true,
+    "checkJs": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "jsx": "preserve",
+    "jsxImportSource": "vue",
+    "downlevelIteration": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    /* Strict Type-Checking Options */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    /* Module Resolution Options */
+    "moduleResolution": "node",
+    "baseUrl": "./",
     "paths": {
       "@/*": [
-        "./src/*"
-      ]
+        "src/*"
+      ],
     },
-    "lib": [
-      "esnext",
-      "dom"
-    ],
-    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    /* Experimental Options */
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    /* Advanced Options */
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
     "types": [
-      "@dcloudio/types"
-    ],
+      "@dcloudio/types",
+      "node"
+    ]
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
   },
   "include": [
+    "src/**/*",
     "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue"
-  ]
+    "src/**/*.vue",
+  ],
+  "exclude": [
+    "dist/*",
+    "src/uni_modules/*",
+    "**/*/uni.webview.1.5.5.js"
+  ],
+  "vueCompilerOptions": {
+    "target": 3
+  }
 }
